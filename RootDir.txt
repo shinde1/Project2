@@ -1,0 +1,44 @@
+Root directory
+---------------
+cd /
+ls
+bin   dev  home        initrd.img.old  lib64       media  opt   root  sbin  srv  tmp  var      vmlinuz.old
+boot  etc  initrd.img  lib             lost+found  mnt    proc  run   snap  sys  usr  vmlinuz
+
+cd etc
+ls
+NetworkManager          crypttab             hosts            machine-id              polkit-1                 sos.conf
+X11                     dbus-1               hosts.allow      magic                   pollinate                ssh
+acpi                    debconf.conf         hosts.deny       magic.mime              popularity-contest.conf  ssl
+adduser.conf            debian_version       init.d           mailcap                 profile                  subgid
+alternatives            default              initramfs-tools  mailcap.order           profile.d                subgid-
+apm                     deluser.conf         inputrc          manpath.config          protocols                subuid
+apparmor                depmod.d             iproute2         mdadm                   python3                  subuid-
+apparmor.d              dhcp                 iscsi            mime.types              python3.6                sudoers
+apport                  dnsmasq.d            issue            mke2fs.conf             rc0.d                    sudoers.d
+apt                     dnsmasq.d-available  issue.net        modprobe.d              rc1.d                    sysctl.conf
+at.deny                 dpkg                 java-11-openjdk  modules                 rc2.d                    sysctl.d
+authbind                ec2_version          kernel           modules-load.d          rc3.d                    systemd
+bash.bashrc             environment          kernel-img.conf  mtab                    rc4.d                    terminfo
+bash_completion         ethertypes           landscape        nanorc                  rc5.d                    timezone
+bash_completion.d       fonts                ld.so.cache      netplan                 rc6.d                    tmpfiles.d
+bindresvport.blacklist  fstab                ld.so.conf       network                 rcS.d                    tomcat8
+binfmt.d                fuse.conf            ld.so.conf.d     networkd-dispatcher     resolv.conf              ucf.conf
+byobu                   gai.conf             ldap             networks                rmt                      udev
+ca-certificates         groff                legal            newt                    rpc                      ufw
+ca-certificates.conf    group                libaudit.conf    nsswitch.conf           rsyslog.conf             update-manager
+calendar                group-               locale.alias     opt                     rsyslog.d                update-motd.d
+cloud                   grub.d               locale.gen       os-release              screenrc                 update-notifier
+console-setup           gshadow              localtime        overlayroot.conf        securetty                updatedb.conf
+cron.d                  gshadow-             logcheck         overlayroot.local.conf  security                 vim
+cron.daily              gss                  login.defs       pam.conf                selinux                  vmware-tools
+cron.hourly             hdparm.conf          logrotate.conf   pam.d                   services                 vtrgb
+cron.monthly            hibagent-config.cfg  logrotate.d      passwd                  shadow                   wgetrc
+cron.weekly             hibinit-config.cfg   lsb-release      passwd-                 shadow-                  xdg
+crontab                 host.conf            ltrace.conf      perl                    shells                   zsh_command_not_found
+cryptsetup-initramfs    hostname             lvm              pm                      skel
+
+cd tomcat8
+ls
+Catalina  catalina.properties  context.xml  jaspic-providers.xml  logging.properties  policy.d  server.xml  tomcat-users.xml  web.xml
+

@@ -1,0 +1,116 @@
+cd /var/lib
+cd /var/lib/jenkins/
+cd /var/lib/jenkins/workspace (Here u ll find the jobs which u have been 
+                               created in jenkins dashboard)
+cd /var/lib/jenkins/secrets
+cd /var/lib/jenkins/plugins
+cd /var/lib/jenkins/users
+cd /var/lib/jenkins/jobs (here also u ll find the jobs which u have created in jenkins)
+cd /var/lib/jenkins/logs
+
+on the instance where tomcat8 is installed.
+cd /var/lib/tomcat8/webapp
+
+sudo apt-get update
+
+sudo apt-get install default-jre
+
+sudo apt-get install default-jdk
+
+sudo apt-get install openjdk-8-jdk
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
+$JAVA_HOME
+
+
+export PATH=$JAVA_HOME/bin:$PATH
+
+$PATH
+
+======================
+Installation of jenkins begins
+===================
+sudo apt-get install nginx
+
+sudo wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+
+
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+sudo apt-get update
+
+sudo apt-get install jenkins
+
+sudo systemctl status jenkins
+
+============================
+Now open Jenkins ec2/PublicIp:8080 in chrome browser
+=======
+sudo cat /var/lib/jenkins/secrets/initialadminpassword
+
+copy and paste in jenkins
+
+Set username ...etc
+
+install suggested plugins
+
+now start using jenkins....
+
+==============
+
+Manage jenkins
+
+Global tool configuration
+
+JDK ===Jdk installation > uncheck install automatically
+
+Name field: JDK1.8
+JAVA_HOME :: /usr/lib/jvm/java-8-openjdk-amd64
+
+Scroll down
+
+MAVEN
+
+name : M3
+check install automatically
+
+== down side===
+
+Click on SAVE button
+
+=========================
+
+New Item
+
+Enter an item name ::: macven_project
+
+select :: FreeStyle project
+
+down side click on OK button
+
+=========
+
+Source Code Management  >> check Git 
+
+Repository URL :: https://github.com/linuxacademy/content-cje-prebuild.git
+
+Build >> click on Add build step > invoke top level meven target
+
+Maven Version :: M3
+Goals :: clean package
+
+downside click on SAVE button
+
+================
+
+Build Now 
+
+=====================
+BUILD Sucsess
+==================5
+
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+PATH=$PATH:$JAVA_HOME:$M2_HOME:$M2:$HOME/bin
+M2_HOME=/usr/share/maven
+M2=$M2_HOME/bin
