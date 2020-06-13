@@ -1,0 +1,80 @@
+Login as ec2-user in Redhat Linux Server
+sudo su - (switch to root user)
+pwd
+   /root
+ls
+   anaconda-ks.cfg  
+   original-ks.cfg
+ls -la
+   . 
+   .. 
+   anaconda-ks.cfg 
+   original-ks.cfg 
+   .bash_history  
+   .bash_logout  
+   .bash_profile  
+   .bashrc  
+   .cshrc    
+   .ssh  
+   .tcshrc
+
+ls /
+   bin  boot  data  dev  etc  home  lib  lib64  media  mnt  
+   opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+
+In /opt folder we download tomcat8
+cd /opt
+yum install wget
+wget http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.56/bin/apache-tomcat-8.5.56.tar.gz
+ls 
+    apache-tomcat-8.5.56.tar.gz
+
+Untar this file
+    tar -xvzf apache-tomcat-8.5.56.tar.gz
+
+ls
+    apache-tomcat-8.5.56.tar
+    apache-tomcat-8.5.56.tar.gz
+
+Go inside apache-tomcat-8.5.56.tar
+cd apache-tomcat-8.5.56.tar
+ls
+    bin  conf    lib    logs   temp  webapps  work 
+    BUILDING.txt RUNNING.txt CONTRIBUTING.md README.md LICENSE NOTICE RELEASE-NOTES
+
+cd bin
+ls
+    bootstrap.jar       ciphers.bat                   configtest.bat  digest.sh         shutdown.sh      tomcat-native.tar.gz  version.sh
+    catalina.bat        ciphers.sh                    configtest.sh   setclasspath.bat  startup.bat      tool-wrapper.bat
+    catalina.sh         commons-daemon.jar            daemon.sh       setclasspath.sh   startup.sh       tool-wrapper.sh
+    catalina-tasks.xml  commons-daemon-native.tar.gz  digest.bat      shutdown.bat      tomcat-juli.jar  version.bat
+
+cd conf
+    Catalina         catalina.properties  jaspic-providers.xml  logging.properties  tomcat-users.xml  web.xml
+    catalina.policy  context.xml          jaspic-providers.xsd  server.xml          tomcat-users.xsd
+
+cd lib
+    annotations-api.jar       catalina-tribes.jar  jaspic-api.jar     tomcat-dbcp.jar     tomcat-i18n-ko.jar     tomcat-util.jar
+    catalina-ant.jar          ecj-4.6.3.jar        jsp-api.jar        tomcat-i18n-de.jar  tomcat-i18n-ru.jar     tomcat-util-scan.jar
+    catalina-ha.jar           el-api.jar           servlet-api.jar    tomcat-i18n-es.jar  tomcat-i18n-zh-CN.jar  tomcat-websocket.jar
+    catalina.jar              jasper-el.jar        tomcat-api.jar     tomcat-i18n-fr.jar  tomcat-jdbc.jar        websocket-api.jar
+    catalina-storeconfig.jar  jasper.jar           tomcat-coyote.jar  tomcat-i18n-ja.jar  tomcat-jni.jar
+
+cd logs
+   catalina.2020-06-10.log  host-manager.2020-06-10.log  localhost_access_log.2020-06-10.txt
+   catalina.out             localhost.2020-06-10.log     manager.2020-06-10.log
+
+cd temp
+    safeToDelete.tmp
+
+cd webapps
+   docs  examples  host-manager  manager  ROOT
+
+cd work
+   Catalina
+
+
+
+
+
+
